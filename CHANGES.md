@@ -21,6 +21,10 @@ OpenSSL Releases
 OpenSSL 3.0
 -----------
 
+ * Add QUIC API support from BoringSSL.
+
+   *Todd Short*
+
 ### Changes between 1.1.1 and 3.0 alpha 16 [6 May 2021]
 
  * Add "abspath" and "includedir" pragma's to config files, to prevent,
