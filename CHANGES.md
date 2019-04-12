@@ -21,6 +21,10 @@ OpenSSL Releases
 OpenSSL 3.0
 -----------
 
+ * Add QUIC API support from BoringSSL.
+
+   *Todd Short*
+
 ### Changes between 1.1.1 and 3.0 alpha 15 [22 Apr 2021]
 
  * The default manual page suffix ($MANSUFFIX) has been changed to "ossl"
