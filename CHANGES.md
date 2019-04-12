@@ -28,6 +28,12 @@ breaking changes, and mappings for the large list of deprecated functions.
 
 [Migration guide]: https://github.com/openssl/openssl/tree/master/doc/man7/migration_guide.pod
 
+### Changes between 3.0 alpha 17 and alpha 17+quic [20 May 2021]
+
+* Add QUIC API support from BoringSSL.
+
+   *Todd Short*
+
 ### Changes between 1.1.1 and 3.0 alpha 17 [20 May 2021]
 
  * The signatures of the functions to get and set options on SSL and
