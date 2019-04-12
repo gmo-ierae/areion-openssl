@@ -21,6 +21,10 @@ OpenSSL Releases
 OpenSSL 3.0
 -----------
 
+ * Add QUIC API support from BoringSSL.
+
+   *Todd Short*
+
 ### Changes between 1.1.1 and 3.0 alpha 14 [8 Apr 2021]
 
  * A public key check is now performed during EVP_PKEY_derive_set_peer().
