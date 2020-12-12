@@ -509,3 +509,7 @@ SSL_set_quic_method                     10101	1_1_1d	EXIST::FUNCTION:QUIC
 SSL_quic_max_handshake_flight_len       10102	1_1_1d	EXIST::FUNCTION:QUIC
 SSL_process_quic_post_handshake         10103	1_1_1d	EXIST::FUNCTION:QUIC
 SSL_provide_quic_data                   10104	1_1_1d	EXIST::FUNCTION:QUIC
+SSL_set_quic_use_legacy_codepoint       10105	1_1_1i	EXIST::FUNCTION:QUIC
+SSL_set_quic_transport_version          10106	1_1_1i	EXIST::FUNCTION:QUIC
+SSL_get_peer_quic_transport_version     10107	1_1_1i	EXIST::FUNCTION:QUIC
+SSL_get_quic_transport_version          10108	1_1_1i	EXIST::FUNCTION:QUIC
