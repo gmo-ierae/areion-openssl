@@ -1411,7 +1411,8 @@ struct ssl_st {
     OSSL_ENCRYPTION_LEVEL quic_read_level;
     OSSL_ENCRYPTION_LEVEL quic_write_level;
     OSSL_ENCRYPTION_LEVEL quic_latest_level_received;
-    /* defaults to 0, but can be set to:
+    /*
+     * defaults to 0, but can be set to:
      * - TLSEXT_TYPE_quic_transport_parameters_draft
      * - TLSEXT_TYPE_quic_transport_parameters
      * Client: if 0, send both

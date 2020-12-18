@@ -6827,7 +6827,7 @@ static int test_quic_api(int tst)
 
     /* Failure cases:
      * test 6/[5] clnt = parameters, srvr = draft
-     * test 8/[7] clnt = draft, srvr = paramrters
+     * test 8/[7] clnt = draft, srvr = parameters
      */
 
     /* Clean up logging space */

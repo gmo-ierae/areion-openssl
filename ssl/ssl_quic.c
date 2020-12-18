@@ -44,7 +44,7 @@ void SSL_get_peer_quic_transport_params(const SSL *ssl,
     }
 }
 
-/* returns 0 if both are set, -1 if neither, otherwise version */
+/* Returns the negotiated version, or -1 on error */
 int SSL_get_peer_quic_transport_version(const SSL *ssl)
 {
     if (ssl->ext.peer_quic_transport_params_len != 0
