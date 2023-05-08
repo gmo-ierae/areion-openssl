@@ -55,6 +55,7 @@ static const ssl_cipher_table ssl_cipher_table_cipher[SSL_ENC_NUM_IDX] = {
     {SSL_ARIA256GCM, NID_aria_256_gcm}, /* SSL_ENC_ARIA256GCM_IDX 21 */
     {SSL_MAGMA, NID_magma_ctr_acpkm}, /* SSL_ENC_MAGMA_IDX */
     {SSL_KUZNYECHIK, NID_kuznyechik_ctr_acpkm}, /* SSL_ENC_KUZNYECHIK_IDX */
+    {SSL_AREION, NID_areion_256_opp},
 };
 
 #define SSL_COMP_NULL_IDX       0
@@ -251,6 +252,8 @@ static const SSL_CIPHER cipher_aliases[] = {
     {0, SSL_TXT_ARIA128, NULL, 0, 0, 0, SSL_ARIA128GCM},
     {0, SSL_TXT_ARIA256, NULL, 0, 0, 0, SSL_ARIA256GCM},
     {0, SSL_TXT_CBC, NULL, 0, 0, 0, SSL_CBC},
+
+    {0, SSL_TXT_AREION, 0, 0, 0, SSL_AREION, 0, 0, 0, 0, 0, 0, 0, 0, 0},
 
     /* MAC aliases */
     {0, SSL_TXT_MD5, NULL, 0, 0, 0, 0, SSL_MD5},
@@ -1515,6 +1518,8 @@ STACK_OF(SSL_CIPHER) *ssl_create_cipher_list(SSL_CTX *ctx,
                           &head, &tail);
     ssl_cipher_apply_rule(0, 0, 0, SSL_CHACHA20, 0, 0, 0, CIPHER_ADD, -1,
                           &head, &tail);
+    ssl_cipher_apply_rule(0, 0, 0, SSL_AREION, 0, 0, 0, CIPHER_ADD, -1,
+                          &head, &tail);
 
     /*
      * ...and generally, our preferred cipher is AES.
@@ -1858,6 +1863,9 @@ char *SSL_CIPHER_description(const SSL_CIPHER *cipher, char *buf, int len)
         break;
     case SSL_CHACHA20POLY1305:
         enc = "CHACHA20/POLY1305(256)";
+        break;
+    case SSL_AREION:
+        enc = "AREION";
         break;
     default:
         enc = "unknown";
@@ -2242,6 +2250,7 @@ const char *OSSL_default_ciphersuites(void)
 {
     return "TLS_AES_256_GCM_SHA384:"
            "TLS_CHACHA20_POLY1305_SHA256:"
+           "TLS_AREION_256_OPP_SHA256:"
            "TLS_AES_128_GCM_SHA256";
 }
 

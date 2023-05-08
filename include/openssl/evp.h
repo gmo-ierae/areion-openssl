@@ -475,6 +475,8 @@ typedef struct {
 /* Length of tag for TLS */
 # define EVP_CHACHAPOLY_TLS_TAG_LEN                      16
 
+# define EVP_AREION_OPP_TLS_TAG_LEN                      16
+
 typedef struct evp_cipher_info_st {
     const EVP_CIPHER *cipher;
     unsigned char iv[EVP_MAX_IV_LENGTH];

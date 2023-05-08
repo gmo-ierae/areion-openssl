@@ -1583,6 +1583,9 @@ sm-scheme 104 7         : SM4-CTR             : sm4-ctr
 			: ChaCha20-Poly1305		: chacha20-poly1305
 			: ChaCha20			: chacha20
 
+			: AREION-256-OPP			: areion-256-opp
+			: AREION-512-OPP			: areion-512-opp
+
 ISO-US 10046 2 1	: dhpublicnumber		: X9.42 DH
 
 # RFC 5639 curve OIDs (see http://www.ietf.org/rfc/rfc5639.txt)

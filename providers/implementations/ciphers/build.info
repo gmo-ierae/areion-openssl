@@ -25,6 +25,7 @@ $SM4_GOAL=../../libdefault.a
 $CHACHA_GOAL=../../libdefault.a
 $CHACHAPOLY_GOAL=../../libdefault.a
 $SIV_GOAL=../../libdefault.a
+$AREION_GOAL=../../libdefault.a
 
 # This source is common building blocks for all ciphers in all our providers.
 SOURCE[$COMMON_GOAL]=\
@@ -142,3 +143,6 @@ IF[{- !$disabled{chacha} -}]
       cipher_chacha20_poly1305.c cipher_chacha20_poly1305_hw.c
  ENDIF
 ENDIF
+
+SOURCE[$AREION_GOAL]=\
+  cipher_areion_opp.c cipher_areion_opp_hw.c

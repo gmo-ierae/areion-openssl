@@ -595,6 +595,7 @@ int SSL_CTX_set_tlsext_ticket_key_evp_cb
 # define TLS1_3_CK_CHACHA20_POLY1305_SHA256               0x03001303
 # define TLS1_3_CK_AES_128_CCM_SHA256                     0x03001304
 # define TLS1_3_CK_AES_128_CCM_8_SHA256                   0x03001305
+# define TLS1_3_CK_AREION_256_OPP_SHA256                  0x030013FF
 
 /* Aria ciphersuites from RFC6209 */
 # define TLS1_CK_RSA_WITH_ARIA_128_GCM_SHA256             0x0300C050
@@ -673,6 +674,7 @@ int SSL_CTX_set_tlsext_ticket_key_evp_cb
 # define TLS1_3_RFC_AES_128_GCM_SHA256                   "TLS_AES_128_GCM_SHA256"
 # define TLS1_3_RFC_AES_256_GCM_SHA384                   "TLS_AES_256_GCM_SHA384"
 # define TLS1_3_RFC_CHACHA20_POLY1305_SHA256             "TLS_CHACHA20_POLY1305_SHA256"
+# define TLS1_3_RFC_AREION_256_OPP_SHA256                "TLS_AREION_256_OPP_SHA256"
 # define TLS1_3_RFC_AES_128_CCM_SHA256                   "TLS_AES_128_CCM_SHA256"
 # define TLS1_3_RFC_AES_128_CCM_8_SHA256                 "TLS_AES_128_CCM_8_SHA256"
 # define TLS1_RFC_ECDHE_ECDSA_WITH_NULL_SHA              "TLS_ECDHE_ECDSA_WITH_NULL_SHA"
