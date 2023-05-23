@@ -212,7 +212,7 @@ OSSL_FUNC_rand_clear_seed_fn ossl_drbg_clear_seed;
                                             \
         for (i = 0; i < OSSL_NELEM(v); i++) \
             if ((v)[i] != 0)                \
-                return 0;                   \
+                goto err;                   \
     }
 
 /* locking api */
@@ -222,6 +222,8 @@ OSSL_FUNC_rand_unlock_fn ossl_drbg_unlock;
 
 /* Common parameters for all of our DRBGs */
 int ossl_drbg_get_ctx_params(PROV_DRBG *drbg, OSSL_PARAM params[]);
+int ossl_drbg_get_ctx_params_no_lock(PROV_DRBG *drbg, OSSL_PARAM params[],
+                                     int *complete);
 int ossl_drbg_set_ctx_params(PROV_DRBG *drbg, const OSSL_PARAM params[]);
 
 #define OSSL_PARAM_DRBG_SETTABLE_CTX_COMMON                                      \
