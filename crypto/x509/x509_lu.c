@@ -328,7 +328,7 @@ int X509_STORE_CTX_get_by_subject(const X509_STORE_CTX *vs,
     stmp.type = X509_LU_NONE;
     stmp.data.ptr = NULL;
 
-    if (!X509_STORE_lock_ex(store, 1))
+    if (!x509_store_lock_ex(store, 1))
         return 0;
 
     /* Should already be sorted...but just in case */
