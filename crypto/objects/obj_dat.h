@@ -1117,7 +1117,7 @@ static const unsigned char so[8076] = {
     0x2A,0x86,0x48,0x86,0xF7,0x0D,0x01,0x09,0x10,0x01,0x30,  /* [ 8064] OBJ_id_ct_signedChecklist */
 };
 
-#define NUM_NID 1248
+#define NUM_NID 1250
 static const ASN1_OBJECT nid_objs[NUM_NID] = {
     {"UNDEF", "undefined", NID_undef},
     {"rsadsi", "RSA Data Security, Inc.", NID_rsadsi, 6, &so[0]},
@@ -2367,9 +2367,11 @@ static const ASN1_OBJECT nid_objs[NUM_NID] = {
     {"rpkiNotify", "RPKI Notify", NID_rpkiNotify, 8, &so[8045]},
     {"id-ct-geofeedCSVwithCRLF", "id-ct-geofeedCSVwithCRLF", NID_id_ct_geofeedCSVwithCRLF, 11, &so[8053]},
     {"id-ct-signedChecklist", "id-ct-signedChecklist", NID_id_ct_signedChecklist, 11, &so[8064]},
+    {"AREION-256-OPP", "areion-256-opp", NID_areion_256_opp},
+    {"AREION-512-OPP", "areion-512-opp", NID_areion_512_opp},
 };
 
-#define NUM_SN 1239
+#define NUM_SN 1241
 static const unsigned int sn_objs[NUM_SN] = {
      364,    /* "AD_DVCS" */
      419,    /* "AES-128-CBC" */
@@ -2407,6 +2409,8 @@ static const unsigned int sn_objs[NUM_SN] = {
      428,    /* "AES-256-OFB" */
     1200,    /* "AES-256-SIV" */
      914,    /* "AES-256-XTS" */
+    1248,    /* "AREION-256-OPP" */
+    1249,    /* "AREION-512-OPP" */
     1066,    /* "ARIA-128-CBC" */
     1120,    /* "ARIA-128-CCM" */
     1067,    /* "ARIA-128-CFB" */
@@ -3612,7 +3616,7 @@ static const unsigned int sn_objs[NUM_SN] = {
     1093,    /* "x509ExtAdmission" */
 };
 
-#define NUM_LN 1239
+#define NUM_LN 1241
 static const unsigned int ln_objs[NUM_LN] = {
      363,    /* "AD Time Stamping" */
      405,    /* "ANSI X9.62" */
@@ -3889,6 +3893,8 @@ static const unsigned int ln_objs[NUM_LN] = {
     1200,    /* "aes-256-siv" */
      914,    /* "aes-256-xts" */
      376,    /* "algorithm" */
+    1248,    /* "areion-256-opp" */
+    1249,    /* "areion-512-opp" */
     1066,    /* "aria-128-cbc" */
     1120,    /* "aria-128-ccm" */
     1067,    /* "aria-128-cfb" */
