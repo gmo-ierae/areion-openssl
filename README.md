@@ -29,21 +29,35 @@ We have confirmed that this software can be built and executed on the following 
 Note. Ubuntu is a registered trademark or trademark of Canonical Ltd. in the United States and other countries.
 
 ## How to Build
-(差し替え予定)
 ```
 $ sudo apt update
-$ sudo apt install --no-install-recommends make cmake gcc g++
+$ sudo apt install --no-install-recommends make gcc libc-dev
 $ mkdir build
 $ cd build
-$ cmake ..
+$ ../Configure no-shared linux-x86_64
 $ make
 ```
 
 ## How to Test
-（差し替え予定）
+### Check OpenSSL Ciphers
 ```
-$ ./areion-test
+$ ./apps/openssl ciphers -v | grep -i areion
 ```
+
+### Check Secure Communication with New TLS1.3 CipherSuites Available Areion
+
+Before executing the following command, please make sure to create the server certificate 'server.pem'.
+
+- server side
+```
+$ ./apps/openssl s_server -cert server.pem -key private-key.pem -accept 10000 -ciphersuites "TLS_AREION_256_OPP_SHA256"
+```
+
+- client side
+```
+$ ./apps/openssl s_client -connect localhost:10000 -ciphersuites "TLS_AREION_256_OPP_SHA256"
+```
+
 
 # License
 The source code is provided under the Apache License 2.0.
