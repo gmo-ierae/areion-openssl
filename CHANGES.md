@@ -21,7 +21,11 @@ OpenSSL Releases
 
 OpenSSL 3.1
 -----------
+### Changes between 3.1.0 + quic and 3.1.0 + quic + areion [23 Jul 2023]
+ * Experimentally add new TLS 1.3 ciphersuites with Areion enabled "TLS_AREION_256_OPP_SHA256" to quictls. 
 
+   *GMO Cybersecurity by Ierae, Inc.*
+ 
 ### Changes between 3.0 and 3.1.0 [14 Mar 2023]
 
  * Add FIPS provider configuration option to enforce the

@@ -1,5 +1,6 @@
 /*
  * Copyright 2012-2022 The OpenSSL Project Authors. All Rights Reserved.
+ * Copyright (c) 2023 GMO Cybersecurity by Ierae, Inc. All rights reserved
  *
  * Licensed under the Apache License 2.0 (the "License").  You may not use
  * this file except in compliance with the License.  You can obtain a copy
