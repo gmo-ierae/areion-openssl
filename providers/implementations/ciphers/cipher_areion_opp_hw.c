@@ -224,7 +224,8 @@ static inline void store_state_trunc(uint8_t *out, size_t outlen, const opp_stat
 static inline opp_state_t opp_init_mask(const unsigned char *k, const unsigned char *n)
 {
     uint8_t block[BYTES(OPP_B)];
-    memcpy(&block[0], n, 16);
+    memcpy(&block[0], n, 12);
+    memset(&block[12], 0, 4);
     memcpy(&block[16], k, 16);
     opp_state_t mask = load_state(block);
     /* apply permutation */
